@@ -1,0 +1,15 @@
+{
+  "issueKeyTestcaseValues": {
+    "514f54b6-44dc-4cd6-aac1-76f656dc8783": "0bcd454c-fef5-4d82-3513-08d8ff1e6b57",
+    "8cf4bffc-b27d-4658-b708-a77fc6a1dd0c": "8ddd30af-1949-4447-3511-08d8ff1e6b57",
+    "89bb2bba-d577-481d-b5c7-ee636375c726": "d6f4e36c-6b44-4411-3515-08d8ff1e6b57",
+    "e765b04f-ca1d-47cf-b9fe-54c228791de3": "9effd482-3ee4-4167-10f3-08d8ffe88bf0",
+    "e1c65efa-bdb7-468f-85f6-0c2515a395b1": "83a1b698-b6e8-4e6c-3cbd-08d914888d96",
+    "1d87e217-36c1-41cc-a6b7-2993eb283bae": "24ed50c7-a345-4781-3cb9-08d914888d96",
+    "5493b1a9-f301-479b-9e5d-b0fa7c481cb6": "4d6ba205-3a8c-4aa7-3cbb-08d914888d96",
+    "00dd92d8-5965-417c-9ed0-f5e342180d94": "3650f484-6026-4e05-3cbf-08d914888d96",
+    "7ab00fd1-0f58-48c0-989a-78ac95b3b620": "f919293a-d3e7-40ec-3cbc-08d914888d96",
+    "9c303d47-8fec-4c0f-9a65-46128408ebef": "b0f9af21-391a-4db9-3cba-08d914888d96"
+  },
+  "testManagerBasePath": "https://windows-iq5c200:8443/"
+}

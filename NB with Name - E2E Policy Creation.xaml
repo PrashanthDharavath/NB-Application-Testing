@@ -1,0 +1,633 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="NB_with_Name___E2E_Policy_Creation" this:NB_with_Name___E2E_Policy_Creation.End_date="21.06.2021" this:NB_with_Name___E2E_Policy_Creation.Owner_Name_Co_Name="Smit Lamnalco Ltd" this:NB_with_Name___E2E_Policy_Creation.Transaction_type="INITIAL" this:NB_with_Name___E2E_Policy_Creation.Start_date="25.04.2021" this:NB_with_Name___E2E_Policy_Creation.Vessel_name="23-02-2021-Vessel3" this:NB_with_Name___E2E_Policy_Creation.Domicile="Hungary" this:NB_with_Name___E2E_Policy_Creation.Vessel_type="Pushing Boat" this:NB_with_Name___E2E_Policy_Creation.Year_built="1964" this:NB_with_Name___E2E_Policy_Creation.Vessel_flag="NLD" this:NB_with_Name___E2E_Policy_Creation.Vessel_tonnage="10" this:NB_with_Name___E2E_Policy_Creation.Limit_of_liability="100000" this:NB_with_Name___E2E_Policy_Creation.P_I="178.77" this:NB_with_Name___E2E_Policy_Creation.Currency="EUR" this:NB_with_Name___E2E_Policy_Creation.IPT_amount="33.97" this:NB_with_Name___E2E_Policy_Creation.IPT_direct="NO" this:NB_with_Name___E2E_Policy_Creation.Certificate_of_Insurance_nr="6015.0194" this:NB_with_Name___E2E_Policy_Creation.Amount_due="116.2" this:NB_with_Name___E2E_Policy_Creation.Policy_year="2019" this:NB_with_Name___E2E_Policy_Creation.Entity_Type="As Per Rules" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="End_date" Type="InArgument(x:String)" />
+    <x:Property Name="Owner_Name_Co_Name" Type="InArgument(x:String)" />
+    <x:Property Name="Transaction_type" Type="InArgument(x:String)" />
+    <x:Property Name="Start_date" Type="InArgument(x:String)" />
+    <x:Property Name="Vessel_name" Type="InArgument(x:String)" />
+    <x:Property Name="Domicile" Type="InArgument(x:String)" />
+    <x:Property Name="Vessel_type" Type="InArgument(x:String)" />
+    <x:Property Name="Year_built" Type="InArgument(x:String)" />
+    <x:Property Name="Vessel_flag" Type="InArgument(x:String)" />
+    <x:Property Name="Vessel_tonnage" Type="InArgument(x:String)" />
+    <x:Property Name="Limit_of_liability" Type="InArgument(x:String)" />
+    <x:Property Name="P_I" Type="InArgument(x:String)" />
+    <x:Property Name="Specialist_Ops" Type="InArgument(x:String)" />
+    <x:Property Name="Contractual_DTH" Type="InArgument(x:String)" />
+    <x:Property Name="Currency" Type="InArgument(x:String)" />
+    <x:Property Name="IPT_amount" Type="InArgument(x:String)" />
+    <x:Property Name="IPT_direct" Type="InArgument(x:String)" />
+    <x:Property Name="Certificate_of_Insurance_nr" Type="InArgument(x:String)" />
+    <x:Property Name="Amount_due" Type="InArgument(x:String)" />
+    <x:Property Name="Policy_year" Type="InArgument(x:String)" />
+    <x:Property Name="DUA_Reference" Type="InArgument(x:String)" />
+    <x:Property Name="Entity_Type" Type="InArgument(x:String)" />
+    <x:Property Name="strUtomAppURL" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:NB_with_Name___E2E_Policy_Creation.Specialist_Ops>
+    <InArgument x:TypeArguments="x:String">
+      <Literal x:TypeArguments="x:String" Value="" />
+    </InArgument>
+  </this:NB_with_Name___E2E_Policy_Creation.Specialist_Ops>
+  <this:NB_with_Name___E2E_Policy_Creation.Contractual_DTH>
+    <InArgument x:TypeArguments="x:String">
+      <Literal x:TypeArguments="x:String" Value="" />
+    </InArgument>
+  </this:NB_with_Name___E2E_Policy_Creation.Contractual_DTH>
+  <this:NB_with_Name___E2E_Policy_Creation.DUA_Reference>
+    <InArgument x:TypeArguments="x:String">
+      <Literal x:TypeArguments="x:String" Value="" />
+    </InArgument>
+  </this:NB_with_Name___E2E_Policy_Creation.DUA_Reference>
+  <this:NB_with_Name___E2E_Policy_Creation.strUtomAppURL>
+    <InArgument x:TypeArguments="x:String" />
+  </this:NB_with_Name___E2E_Policy_Creation.strUtomAppURL>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>897,4386</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>NB_with_Name___E2E_Policy_Creation_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="44">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Testing</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Testing.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="54">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.Testing</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="NB_with_Name___E2E_Policy_Creation" sap:VirtualizedContainerService.HintSize="796,4221" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="strPolicyReferenceMessage" />
+      <Variable x:TypeArguments="x:String" Name="strSubmitButtonMessage" />
+      <Variable x:TypeArguments="x:Boolean" Name="blnReportExist" />
+      <Variable x:TypeArguments="x:String" Name="strCreateAppMessage" />
+      <Variable x:TypeArguments="x:String" Name="strAppDetailsMessage" />
+      <Variable x:TypeArguments="x:String" Name="strManageBrokerClickMessage" />
+      <Variable x:TypeArguments="x:String" Name="strManageMemberMessage" />
+      <Variable x:TypeArguments="x:String" Name="strConfirmationMessage" />
+      <Variable x:TypeArguments="x:String" Name="strSaveandCloseMessage" />
+      <Variable x:TypeArguments="x:String" Name="strManageCoverMessage" />
+      <Variable x:TypeArguments="x:String" Name="strRiskSaveandClose" />
+      <Variable x:TypeArguments="x:String" Name="strTradingSaveandCloseMessage" />
+      <Variable x:TypeArguments="x:String" Name="strPCReportPath" />
+      <Variable x:TypeArguments="x:String" Name="strPolicyReference" />
+      <Variable x:TypeArguments="ui:Browser" Name="strUtomBrowser" />
+      <Variable x:TypeArguments="x:String" Name="strAddMemberMessage" />
+      <Variable x:TypeArguments="x:String" Name="strPolicyClauseMessage" />
+      <Variable x:TypeArguments="x:String" Name="strManagePartyMessage" />
+      <Variable x:TypeArguments="x:String" Name="strManageSubjectivitiesMessage" />
+      <Variable x:TypeArguments="x:String" Name="strManagePremiumMessage" />
+      <Variable x:TypeArguments="x:String" Name="strInstalmentPatternMessage" />
+      <Variable x:TypeArguments="x:String" Name="strCheckValidityMessage" />
+      <Variable x:TypeArguments="x:String" Name="strAssessmentTabMessage" />
+      <Variable x:TypeArguments="x:String" Name="strBrokerCommissionSaveMessage" />
+      <Variable x:TypeArguments="x:String" Name="strQuoteMessage" />
+      <Variable x:TypeArguments="x:String" Name="strIssueMessage" />
+      <Variable x:TypeArguments="x:String" Name="strBindConfirmationMessage" />
+      <Variable x:TypeArguments="x:String" Name="strUpdateDocPrefMessage" />
+      <Variable x:TypeArguments="x:String" Name="strBindMessage" />
+      <Variable x:TypeArguments="x:String" Name="strBindSuccessMessage" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="754,783" sap2010:WorkflowViewState.IdRef="Sequence_5">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Application Testing Report Path" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="484,137" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+        <ui:GetRobotAsset.Value>
+          <OutArgument x:TypeArguments="x:String">[strPCReportPath]</OutArgument>
+        </ui:GetRobotAsset.Value>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:GetRobotAsset>
+      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Utom Application URL" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="484,137" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+        <ui:GetRobotAsset.Value>
+          <OutArgument x:TypeArguments="x:String">[strUtomAppURL]</OutArgument>
+        </ui:GetRobotAsset.Value>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:GetRobotAsset>
+      <ui:PathExists DisplayName="Path Exists" Exists="[blnReportExist]" sap:VirtualizedContainerService.HintSize="484,89" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[strPCReportPath]" PathType="File" />
+      <If Condition="[blnReportExist]" sap:VirtualizedContainerService.HintSize="484,208" sap2010:WorkflowViewState.IdRef="If_1">
+        <If.Then>
+          <ui:Delete ContinueOnError="{x:Null}" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delete_1" Path="[strPCReportPath]" />
+        </If.Then>
+      </If>
+    </Sequence>
+    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="754,204" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process - E2E Policy Creation workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Process - E2E Policy Creation.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InOutArgument x:TypeArguments="ui:Browser" x:Key="strUtomBrowser">
+            <mva:VisualBasicReference x:TypeArguments="ui:Browser" ExpressionText="strUtomBrowser" />
+          </InOutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strReportPath">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strPCReportPath" />
+          </InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strCreateAppMessage">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strCreateAppMessage" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strAppDetailsMessage">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strAppDetailsMessage" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strSubmitButtonMessage">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strSubmitButtonMessage" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strManageBrokerClickMessage">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strManageBrokerClickMessage" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strPolicyReferenceMessage">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strPolicyReferenceMessage" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strManageMemberMessage">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strManageMemberMessage" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strConfirmationMessage">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strConfirmationMessage" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strAddMemberMessage">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strAddMemberMessage" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strSaveandCloseMessage">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strSaveandCloseMessage" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strManageCoverMessage">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strManageCoverMessage" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strRiskSaveandClose">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strRiskSaveandClose" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strTradingSaveandCloseMessage">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strTradingSaveandCloseMessage" />
+          </OutArgument>
+          <InOutArgument x:TypeArguments="x:String" x:Key="strPolicyReference">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strPolicyReference" />
+          </InOutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Start_date">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Start_date" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="End_date">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="End_date" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Transaction_type">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Transaction_type" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Vessel_name">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Vessel_name" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Owner_Name_Co_Name">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Owner_Name_Co_Name" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Domicile">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Domicile" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Vessel_type">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Vessel_type" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Year_built">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Year_built" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Vessel_flag">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Vessel_flag" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Vessel_tonnage">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Vessel_tonnage" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Limit_of_liability">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Limit_of_liability" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="P_I">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="P_I" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Specialist_Ops">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Specialist_Ops" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Contractual_DTH">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Contractual_DTH" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Currency">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Currency" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="IPT_amount">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="IPT_amount" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="IPT_direct">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="IPT_direct" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Certificate_of_Insurance_nr">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Certificate_of_Insurance_nr" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Amount_due">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Amount_due" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Policy_year">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Policy_year" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="DUA_Reference">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="DUA_Reference" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Entity_Type">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Entity_Type" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strUtomAppURL">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strUtomAppURL" />
+          </InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strPolicyClauseMessage">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strPolicyClauseMessage" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strManagePartyMessage">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strManagePartyMessage" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strManageSubjectivitiesMessage">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strManageSubjectivitiesMessage" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strManagePremiumMessage">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strManagePremiumMessage" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strInstalmentPatternMessage">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strInstalmentPatternMessage" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strCheckValidityMessage">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strCheckValidityMessage" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strAssessmentTabMessage">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strAssessmentTabMessage" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strBrokerCommissionSaveMessage">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strBrokerCommissionSaveMessage" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strQuoteMessage">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strQuoteMessage" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strIssueMessage">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strIssueMessage" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strBindConfirmationMessage">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strBindConfirmationMessage" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strUpdateDocPrefMessage">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strUpdateDocPrefMessage" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strBindMessage">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strBindMessage" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strBindSuccessMessage">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strBindSuccessMessage" />
+          </OutArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+    </Sequence>
+    <Sequence DisplayName="... Then" sap:VirtualizedContainerService.HintSize="754,3062" sap2010:WorkflowViewState.IdRef="Sequence_6">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="712,61" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_1" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyExpressionWithOperator.FirstExpression>
+          <InArgument x:TypeArguments="x:String">[strCreateAppMessage]</InArgument>
+        </uta:VerifyExpressionWithOperator.FirstExpression>
+        <uta:VerifyExpressionWithOperator.SecondExpression>
+          <InArgument x:TypeArguments="x:String">["Clicked on Create Application button."]</InArgument>
+        </uta:VerifyExpressionWithOperator.SecondExpression>
+      </uta:VerifyExpressionWithOperator>
+      <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="712,61" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_2" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyExpressionWithOperator.FirstExpression>
+          <InArgument x:TypeArguments="x:String">[strAppDetailsMessage]</InArgument>
+        </uta:VerifyExpressionWithOperator.FirstExpression>
+        <uta:VerifyExpressionWithOperator.SecondExpression>
+          <InArgument x:TypeArguments="x:String">["Clicked on Select Template button."]</InArgument>
+        </uta:VerifyExpressionWithOperator.SecondExpression>
+      </uta:VerifyExpressionWithOperator>
+      <uta:VerifyExpression AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression" Expression="[strSubmitButtonMessage = &quot;Clicked on Submit button.&quot;]" sap:VirtualizedContainerService.HintSize="712,61" sap2010:WorkflowViewState.IdRef="VerifyExpression_1" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False" />
+      <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="712,61" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_3" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyExpressionWithOperator.FirstExpression>
+          <InArgument x:TypeArguments="x:String">[strPolicyReferenceMessage]</InArgument>
+        </uta:VerifyExpressionWithOperator.FirstExpression>
+        <uta:VerifyExpressionWithOperator.SecondExpression>
+          <InArgument x:TypeArguments="x:String">["Application number " + strPolicyReference + " has been created."]</InArgument>
+        </uta:VerifyExpressionWithOperator.SecondExpression>
+      </uta:VerifyExpressionWithOperator>
+      <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="712,61" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_4" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyExpressionWithOperator.FirstExpression>
+          <InArgument x:TypeArguments="x:String">[strManageBrokerClickMessage]</InArgument>
+        </uta:VerifyExpressionWithOperator.FirstExpression>
+        <uta:VerifyExpressionWithOperator.SecondExpression>
+          <InArgument x:TypeArguments="x:String">["Successfully clicked on Manage Broker button."]</InArgument>
+        </uta:VerifyExpressionWithOperator.SecondExpression>
+      </uta:VerifyExpressionWithOperator>
+      <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="712,61" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_5" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyExpressionWithOperator.FirstExpression>
+          <InArgument x:TypeArguments="x:String">[strManageMemberMessage]</InArgument>
+        </uta:VerifyExpressionWithOperator.FirstExpression>
+        <uta:VerifyExpressionWithOperator.SecondExpression>
+          <InArgument x:TypeArguments="x:String">["Successfully clicked on Manage Member button."]</InArgument>
+        </uta:VerifyExpressionWithOperator.SecondExpression>
+      </uta:VerifyExpressionWithOperator>
+      <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="712,61" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_6" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyExpressionWithOperator.FirstExpression>
+          <InArgument x:TypeArguments="x:String">[strAddMemberMessage]</InArgument>
+        </uta:VerifyExpressionWithOperator.FirstExpression>
+        <uta:VerifyExpressionWithOperator.SecondExpression>
+          <InArgument x:TypeArguments="x:String">["Successfully clicked on Add Member button."]</InArgument>
+        </uta:VerifyExpressionWithOperator.SecondExpression>
+      </uta:VerifyExpressionWithOperator>
+      <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="712,61" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_7" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyExpressionWithOperator.FirstExpression>
+          <InArgument x:TypeArguments="x:String">[strSaveandCloseMessage]</InArgument>
+        </uta:VerifyExpressionWithOperator.FirstExpression>
+        <uta:VerifyExpressionWithOperator.SecondExpression>
+          <InArgument x:TypeArguments="x:String">["Clicked on Save and Close in Add Member Page."]</InArgument>
+        </uta:VerifyExpressionWithOperator.SecondExpression>
+      </uta:VerifyExpressionWithOperator>
+      <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="712,61" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_8" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyExpressionWithOperator.FirstExpression>
+          <InArgument x:TypeArguments="x:String">[strManageCoverMessage]</InArgument>
+        </uta:VerifyExpressionWithOperator.FirstExpression>
+        <uta:VerifyExpressionWithOperator.SecondExpression>
+          <InArgument x:TypeArguments="x:String">["Successfully clicked on Manage Cover button."]</InArgument>
+        </uta:VerifyExpressionWithOperator.SecondExpression>
+      </uta:VerifyExpressionWithOperator>
+      <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="712,61" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_9" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyExpressionWithOperator.FirstExpression>
+          <InArgument x:TypeArguments="x:String">[strRiskSaveandClose]</InArgument>
+        </uta:VerifyExpressionWithOperator.FirstExpression>
+        <uta:VerifyExpressionWithOperator.SecondExpression>
+          <InArgument x:TypeArguments="x:String">["Successfully clicked on Save and Close button in Manage Risk page."]</InArgument>
+        </uta:VerifyExpressionWithOperator.SecondExpression>
+      </uta:VerifyExpressionWithOperator>
+      <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="712,61" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_10" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyExpressionWithOperator.FirstExpression>
+          <InArgument x:TypeArguments="x:String">[strTradingSaveandCloseMessage]</InArgument>
+        </uta:VerifyExpressionWithOperator.FirstExpression>
+        <uta:VerifyExpressionWithOperator.SecondExpression>
+          <InArgument x:TypeArguments="x:String">["Successfully clicked on Save and Close on Trading page."]</InArgument>
+        </uta:VerifyExpressionWithOperator.SecondExpression>
+      </uta:VerifyExpressionWithOperator>
+      <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="712,61" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_11" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyExpressionWithOperator.FirstExpression>
+          <InArgument x:TypeArguments="x:String">[strPolicyClauseMessage]</InArgument>
+        </uta:VerifyExpressionWithOperator.FirstExpression>
+        <uta:VerifyExpressionWithOperator.SecondExpression>
+          <InArgument x:TypeArguments="x:String">["Successfully clicked on Manage Policy Clause button."]</InArgument>
+        </uta:VerifyExpressionWithOperator.SecondExpression>
+      </uta:VerifyExpressionWithOperator>
+      <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="712,61" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_12" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyExpressionWithOperator.FirstExpression>
+          <InArgument x:TypeArguments="x:String">[strManagePartyMessage]</InArgument>
+        </uta:VerifyExpressionWithOperator.FirstExpression>
+        <uta:VerifyExpressionWithOperator.SecondExpression>
+          <InArgument x:TypeArguments="x:String">["Successfully clicked on Manage Party button."]</InArgument>
+        </uta:VerifyExpressionWithOperator.SecondExpression>
+      </uta:VerifyExpressionWithOperator>
+      <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="712,61" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_13" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyExpressionWithOperator.FirstExpression>
+          <InArgument x:TypeArguments="x:String">[strManageSubjectivitiesMessage]</InArgument>
+        </uta:VerifyExpressionWithOperator.FirstExpression>
+        <uta:VerifyExpressionWithOperator.SecondExpression>
+          <InArgument x:TypeArguments="x:String">["Successfully clicked on Manage Subjectivities button."]</InArgument>
+        </uta:VerifyExpressionWithOperator.SecondExpression>
+      </uta:VerifyExpressionWithOperator>
+      <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="712,61" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_14" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyExpressionWithOperator.FirstExpression>
+          <InArgument x:TypeArguments="x:String">[strBrokerCommissionSaveMessage]</InArgument>
+        </uta:VerifyExpressionWithOperator.FirstExpression>
+        <uta:VerifyExpressionWithOperator.SecondExpression>
+          <InArgument x:TypeArguments="x:String">["Successfully clicked on Save and Close button."]</InArgument>
+        </uta:VerifyExpressionWithOperator.SecondExpression>
+      </uta:VerifyExpressionWithOperator>
+      <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="712,61" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_15" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyExpressionWithOperator.FirstExpression>
+          <InArgument x:TypeArguments="x:String">[strManagePremiumMessage]</InArgument>
+        </uta:VerifyExpressionWithOperator.FirstExpression>
+        <uta:VerifyExpressionWithOperator.SecondExpression>
+          <InArgument x:TypeArguments="x:String">["Successfully cicked on Manage Premium button."]</InArgument>
+        </uta:VerifyExpressionWithOperator.SecondExpression>
+      </uta:VerifyExpressionWithOperator>
+      <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="712,61" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_16" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyExpressionWithOperator.FirstExpression>
+          <InArgument x:TypeArguments="x:String">[strInstalmentPatternMessage]</InArgument>
+        </uta:VerifyExpressionWithOperator.FirstExpression>
+        <uta:VerifyExpressionWithOperator.SecondExpression>
+          <InArgument x:TypeArguments="x:String">["Successfully clicked on InstalmentPattern button."]</InArgument>
+        </uta:VerifyExpressionWithOperator.SecondExpression>
+      </uta:VerifyExpressionWithOperator>
+      <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="712,61" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_17" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyExpressionWithOperator.FirstExpression>
+          <InArgument x:TypeArguments="x:String">[strCheckValidityMessage]</InArgument>
+        </uta:VerifyExpressionWithOperator.FirstExpression>
+        <uta:VerifyExpressionWithOperator.SecondExpression>
+          <InArgument x:TypeArguments="x:String">["Successfully clicked on Check Validity Message button."]</InArgument>
+        </uta:VerifyExpressionWithOperator.SecondExpression>
+      </uta:VerifyExpressionWithOperator>
+      <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="712,61" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_18" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyExpressionWithOperator.FirstExpression>
+          <InArgument x:TypeArguments="x:String">[strAssessmentTabMessage]</InArgument>
+        </uta:VerifyExpressionWithOperator.FirstExpression>
+        <uta:VerifyExpressionWithOperator.SecondExpression>
+          <InArgument x:TypeArguments="x:String">["Successfully clicked on Assessment button."]</InArgument>
+        </uta:VerifyExpressionWithOperator.SecondExpression>
+      </uta:VerifyExpressionWithOperator>
+      <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="712,61" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_19" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyExpressionWithOperator.FirstExpression>
+          <InArgument x:TypeArguments="x:String">[strQuoteMessage]</InArgument>
+        </uta:VerifyExpressionWithOperator.FirstExpression>
+        <uta:VerifyExpressionWithOperator.SecondExpression>
+          <InArgument x:TypeArguments="x:String">["Successfully clicked on Quote button."]</InArgument>
+        </uta:VerifyExpressionWithOperator.SecondExpression>
+      </uta:VerifyExpressionWithOperator>
+      <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="712,61" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_20" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyExpressionWithOperator.FirstExpression>
+          <InArgument x:TypeArguments="x:String">[strIssueMessage]</InArgument>
+        </uta:VerifyExpressionWithOperator.FirstExpression>
+        <uta:VerifyExpressionWithOperator.SecondExpression>
+          <InArgument x:TypeArguments="x:String">["Successfully clicked on Issue button."]</InArgument>
+        </uta:VerifyExpressionWithOperator.SecondExpression>
+      </uta:VerifyExpressionWithOperator>
+      <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="712,61" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_21" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyExpressionWithOperator.FirstExpression>
+          <InArgument x:TypeArguments="x:String">[strBindConfirmationMessage]</InArgument>
+        </uta:VerifyExpressionWithOperator.FirstExpression>
+        <uta:VerifyExpressionWithOperator.SecondExpression>
+          <InArgument x:TypeArguments="x:String">["Successfully clicked on Bind Confirmation button."]</InArgument>
+        </uta:VerifyExpressionWithOperator.SecondExpression>
+      </uta:VerifyExpressionWithOperator>
+      <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="712,61" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_22" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyExpressionWithOperator.FirstExpression>
+          <InArgument x:TypeArguments="x:String">[strUpdateDocPrefMessage]</InArgument>
+        </uta:VerifyExpressionWithOperator.FirstExpression>
+        <uta:VerifyExpressionWithOperator.SecondExpression>
+          <InArgument x:TypeArguments="x:String">["Successfully clicked on Update Document Preference button."]</InArgument>
+        </uta:VerifyExpressionWithOperator.SecondExpression>
+      </uta:VerifyExpressionWithOperator>
+      <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="712,61" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_23" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyExpressionWithOperator.FirstExpression>
+          <InArgument x:TypeArguments="x:String">[strBindMessage]</InArgument>
+        </uta:VerifyExpressionWithOperator.FirstExpression>
+        <uta:VerifyExpressionWithOperator.SecondExpression>
+          <InArgument x:TypeArguments="x:String">["Successfully clicked on Bind button."]</InArgument>
+        </uta:VerifyExpressionWithOperator.SecondExpression>
+      </uta:VerifyExpressionWithOperator>
+      <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="712,61" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_24" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyExpressionWithOperator.FirstExpression>
+          <InArgument x:TypeArguments="x:String">[strBindSuccessMessage]</InArgument>
+        </uta:VerifyExpressionWithOperator.FirstExpression>
+        <uta:VerifyExpressionWithOperator.SecondExpression>
+          <InArgument x:TypeArguments="x:String">["Policy has been successfully bound."]</InArgument>
+        </uta:VerifyExpressionWithOperator.SecondExpression>
+      </uta:VerifyExpressionWithOperator>
+      <uta:VerifyControlAttribute AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Control Attribute" sap:VirtualizedContainerService.HintSize="712,180" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_1" Operator="Equality" OutputArgument="Exists" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyControlAttribute.ActivityToTest>
+          <ActivityAction>
+            <ui:UiElementExists DisplayName="Element Exists 'BUTTON  Quote'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+              <ui:UiElementExists.Exists>
+                <OutArgument x:TypeArguments="x:Boolean">
+                  <VariableReference x:TypeArguments="x:Boolean">
+                    <VariableReference.Variable>
+                      <Variable x:TypeArguments="x:Boolean" x:Name="__ReferenceID0" Name="Exists" />
+                    </VariableReference.Variable>
+                  </VariableReference>
+                </OutArgument>
+              </ui:UiElementExists.Exists>
+              <ui:UiElementExists.Result>
+                <OutArgument x:TypeArguments="x:Boolean">
+                  <VariableReference x:TypeArguments="x:Boolean">
+                    <VariableReference.Variable>
+                      <Variable x:TypeArguments="x:Boolean" Name="Result" />
+                    </VariableReference.Variable>
+                  </VariableReference>
+                </OutArgument>
+              </ui:UiElementExists.Result>
+              <ui:UiElementExists.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a5edbdf4-6d11-417b-83a0-8443a71ae640" InformativeScreenshot="fb690f1a51d2b9add852d1a67011dbb2" Selector="&lt;html title='Underwriting' /&gt;&lt;webctrl aaname='Policy was bound successfully' parentid='mainContent' tag='SPAN' /&gt;" TimeoutMS="20000" WaitForReady="COMPLETE" />
+              </ui:UiElementExists.Target>
+            </ui:UiElementExists>
+          </ActivityAction>
+        </uta:VerifyControlAttribute.ActivityToTest>
+        <uta:VerifyControlAttribute.ArgumentsBridgeActivity>
+          <ActivityFunc x:TypeArguments="x:Object">
+            <uta:ArgumentsBridge sap2010:WorkflowViewState.IdRef="ArgumentsBridge_1">
+              <uta:ArgumentsBridge.Input>
+                <InArgument x:TypeArguments="x:Object">
+                  <VariableValue x:TypeArguments="x:Object" Variable="{x:Reference __ReferenceID0}" />
+                </InArgument>
+              </uta:ArgumentsBridge.Input>
+            </uta:ArgumentsBridge>
+          </ActivityFunc>
+        </uta:VerifyControlAttribute.ArgumentsBridgeActivity>
+        <uta:VerifyControlAttribute.Expression>
+          <InArgument x:TypeArguments="x:Boolean">[True]</InArgument>
+        </uta:VerifyControlAttribute.Expression>
+      </uta:VerifyControlAttribute>
+      <uta:VerifyControlAttribute AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Control Attribute" sap:VirtualizedContainerService.HintSize="712,163" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_2" Operator="Equality" OutputArgument="Exists" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyControlAttribute.ActivityToTest>
+          <ActivityAction>
+            <ui:PathExists DisplayName="Path Exists" sap:VirtualizedContainerService.HintSize="334,89" sap2010:WorkflowViewState.IdRef="PathExists_2" Path="[strPCReportPath]" PathType="File">
+              <ui:PathExists.Exists>
+                <OutArgument x:TypeArguments="x:Boolean">
+                  <VariableReference x:TypeArguments="x:Boolean">
+                    <VariableReference.Variable>
+                      <Variable x:TypeArguments="x:Boolean" x:Name="__ReferenceID1" Name="Exists" />
+                    </VariableReference.Variable>
+                  </VariableReference>
+                </OutArgument>
+              </ui:PathExists.Exists>
+            </ui:PathExists>
+          </ActivityAction>
+        </uta:VerifyControlAttribute.ActivityToTest>
+        <uta:VerifyControlAttribute.ArgumentsBridgeActivity>
+          <ActivityFunc x:TypeArguments="x:Object">
+            <uta:ArgumentsBridge sap2010:WorkflowViewState.IdRef="ArgumentsBridge_2">
+              <uta:ArgumentsBridge.Input>
+                <InArgument x:TypeArguments="x:Object">
+                  <VariableValue x:TypeArguments="x:Object" Variable="{x:Reference __ReferenceID1}" />
+                </InArgument>
+              </uta:ArgumentsBridge.Input>
+            </uta:ArgumentsBridge>
+          </ActivityFunc>
+        </uta:VerifyControlAttribute.ArgumentsBridgeActivity>
+        <uta:VerifyControlAttribute.Expression>
+          <InArgument x:TypeArguments="x:Boolean">[True]</InArgument>
+        </uta:VerifyControlAttribute.Expression>
+      </uta:VerifyControlAttribute>
+      <ui:KillProcess ContinueOnError="{x:Null}" Process="{x:Null}" AppliesTo="All" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="712,22" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="iexplore" />
+    </Sequence>
+  </Sequence>
+</Activity>
